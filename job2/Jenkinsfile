@@ -11,5 +11,10 @@ pipeline {
                 sh 'hostname'
             }
         }
+        stage('print-date') {
+            steps {
+                sh 'date'
+            }
+        }
     }
 }
