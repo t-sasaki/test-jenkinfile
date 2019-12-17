@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('print-ruby-version') {
             steps {
-                sh 'php --version'
+                sh 'ruby -v'
             }
         }
     }
