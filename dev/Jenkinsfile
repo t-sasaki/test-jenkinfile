@@ -6,5 +6,10 @@ pipeline {
                 sh 'ruby -v'
             }
         }
+        stage('print-date') {
+            steps {
+                sh 'date'
+            }
+        }
     }
 }
