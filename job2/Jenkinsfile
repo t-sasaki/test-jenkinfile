@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('print-php-version') {
             when {
-                changeset "job2/Jenkinsfile"
+                changeset "**/job2/Jenkinsfile"
             }
             steps {
                 sh 'php --version'
