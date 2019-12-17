@@ -1,9 +1,22 @@
 pipeline {
     agent any
     stages {
+        when {
+            changeset "job2/Jenkinsfile"
+        }
         stage('print-php-version') {
             steps {
                 sh 'php --version'
+            }
+        }
+        stage('print-hostname') {
+            steps {
+                sh 'hostname'
+            }
+        }
+        stage('print-date') {
+            steps {
+                sh 'date'
             }
         }
     }
