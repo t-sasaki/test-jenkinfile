@@ -6,9 +6,9 @@ pipeline {
                 sh 'php --version'
             }
         }
-        stage('print-date') {
+        stage('print-hostname') {
             steps {
-                sh 'date'
+                sh 'hostname'
             }
         }
     }
