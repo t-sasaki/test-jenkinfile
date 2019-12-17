@@ -6,5 +6,10 @@ pipeline {
                 sh 'php --version'
             }
         }
+        stage('print-date') {
+            steps {
+                sh 'date'
+            }
+        }
     }
 }
