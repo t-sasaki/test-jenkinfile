@@ -2,9 +2,6 @@ pipeline {
     agent any
     stages {
         stage('print-php-version') {
-            when {
-                changeset "**/job2/Jenkinsfile"
-            }
             steps {
                 sh 'php --version'
             }
